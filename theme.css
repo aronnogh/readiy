@@ -1,0 +1,46 @@
+/* Read Mode — Material 3 dark tokens shared by the popup and the reader. */
+:root {
+  color-scheme: dark;
+  --md-primary: #d0bcff;
+  --md-on-primary: #381e72;
+  --md-primary-container: #4f378b;
+  --md-on-primary-container: #eaddff;
+  --md-secondary-container: #4a4458;
+  --md-on-secondary-container: #e8def8;
+  --md-tertiary: #efb8c8;
+  --md-surface: #141218;
+  --md-surface-lowest: #0f0d13;
+  --md-surface-low: #1d1b20;
+  --md-surface-container: #211f26;
+  --md-surface-high: #2b2930;
+  --md-surface-highest: #36343b;
+  --md-on-surface: #e6e1e5;
+  --md-on-surface-variant: #cac4d0;
+  --md-outline: #938f99;
+  --md-outline-variant: #49454f;
+  --md-error: #f2b8b5;
+  --md-error-container: #8c1d18;
+
+  --md-serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Times New Roman", serif;
+  --md-sans: "Roboto", "Google Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --md-mono: "SF Mono", "Cascadia Mono", "Roboto Mono", Consolas, monospace;
+
+  --md-elevation-1: 0 1px 2px rgba(0, 0, 0, 0.4), 0 1px 3px 1px rgba(0, 0, 0, 0.24);
+  --md-elevation-2: 0 2px 6px 2px rgba(0, 0, 0, 0.34), 0 1px 2px rgba(0, 0, 0, 0.4);
+  --md-ease: cubic-bezier(0.2, 0, 0, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: var(--md-primary);
+  color: var(--md-on-primary);
+}
+
+:focus-visible {
+  outline: 2px solid var(--md-primary);
+  outline-offset: 2px;
+  border-radius: 12px;
+}

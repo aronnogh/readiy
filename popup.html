@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Read Mode</title>
+    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="sheet">
+      <header class="head">
+        <span class="mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+            <path d="M6 3h9.5L20 7.5V21H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm1 2v14h11V8.5h-3.5V5H7Zm2.5 5.5h7V12h-7v-1.5Zm0 3.5h7v1.5h-7V14Zm0 3.5h4.5V19H9.5v-1.5Z" />
+          </svg>
+        </span>
+        <div class="head-text">
+          <h1>Read Mode</h1>
+          <p>Opens in a new tab: big type, dark surface, serif.</p>
+        </div>
+      </header>
+
+      <section class="actions">
+        <button id="open-selection" class="btn btn--filled" type="button">
+          <span class="btn-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path d="M4 9V5a1 1 0 0 1 1-1h4v2H6v3H4Zm13-5h4a1 1 0 0 1 1 1v4h-2V6h-3V4ZM4 15h2v3h3v2H5a1 1 0 0 1-1-1v-4Zm18 0v4a1 1 0 0 1-1 1h-4v-2h3v-3h2ZM8 8h8v1.7H8V8Zm0 3.15h8v1.7H8v-1.7Zm0 3.15h5.5v1.7H8v-1.7Z" />
+            </svg>
+          </span>
+          <span class="btn-text">
+            <span class="btn-label">Open selection</span>
+            <span class="btn-hint">Only the highlighted text</span>
+          </span>
+        </button>
+
+        <button id="open-page" class="btn btn--tonal" type="button">
+          <span class="btn-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path d="M7 4h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm10 2H7v12h10V6Zm-8 2h6v1.5H9V8Zm0 3.5h6V13H9v-1.5Zm0 3.5h4v1.5H9V15Z" />
+            </svg>
+          </span>
+          <span class="btn-text">
+            <span class="btn-label">Open whole page</span>
+            <span class="btn-hint">Complete page, text, images, files</span>
+          </span>
+        </button>
+      </section>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+
+      <footer class="chips">
+        <span class="chip">Dark UI</span>
+        <span class="chip">Serif</span>
+        <span class="chip">Large type</span>
+      </footer>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

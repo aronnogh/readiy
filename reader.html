@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Read Mode</title>
+    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="reader.css" />
+  </head>
+  <body>
+    <header class="appbar">
+      <div class="wordmark">
+        <span class="mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path d="M6 3h9.5L20 7.5V21H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm1 2v14h11V8.5h-3.5V5H7Zm2.5 5.5h7V12h-7v-1.5Zm0 3.5h7v1.5h-7V14Z" />
+          </svg>
+        </span>
+        <span class="wordmark-text">Read Mode</span>
+      </div>
+
+      <div class="tools">
+        <button class="icon-btn" type="button" data-action="smaller" title="Smaller text" aria-label="Smaller text">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+            <path d="M4 18 9.5 6h1.6L16.6 18h-2l-1.4-3.2H7.4L6 18H4Zm3.9-5h3.8L9.8 8.3 7.9 13Z" /><path d="M16.5 13.2h5v1.8h-5v-1.8Z" />
+          </svg>
+        </button>
+        <button class="icon-btn" type="button" data-action="bigger" title="Bigger text" aria-label="Bigger text">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+            <path d="M3 18 8.5 6h1.6L15.6 18h-2l-1.4-3.2H6.4L5 18H3Zm3.9-5h3.8L8.8 8.3 6.9 13Z" /><path d="M16.4 15v-2.6h-2.6v-1.8h2.6V8h1.8v2.6H21v1.8h-2.8V15h-1.8Z" />
+          </svg>
+        </button>
+        <button class="pill" type="button" data-action="width" aria-pressed="false">Wide</button>
+        <a class="pill pill--link" id="original" target="_blank" rel="noreferrer noopener" hidden>Original</a>
+      </div>
+    </header>
+
+    <main class="stage">
+      <article class="doc" id="doc" hidden>
+        <div class="meta">
+          <span class="badge" id="kind">Reading</span>
+          <span id="site"></span>
+          <span aria-hidden="true">·</span>
+          <span id="length"></span>
+        </div>
+        <h1 class="title" id="title"></h1>
+        <div class="content" id="content"></div>
+        <footer class="doc-foot">
+          <a class="source-link" id="source" target="_blank" rel="noreferrer noopener" hidden>
+            Open the original page
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+              <path d="M10 6v2H6v10h10v-4h2v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4Zm4-2h6v6h-2V6.4l-6.3 6.3-1.4-1.4L16.6 5H14V4Z" />
+            </svg>
+          </a>
+        </footer>
+      </article>
+
+      <section class="empty" id="empty" hidden>
+        <span class="empty-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="34" height="34" fill="currentColor">
+            <path d="M6 3h9.5L20 7.5V21H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm1 2v14h11V8.5h-3.5V5H7Z" />
+          </svg>
+        </span>
+        <h2 id="empty-title">Nothing to read yet</h2>
+        <p id="empty-text">
+          Pick some text on a page, open Read Mode and choose “Open selection”. You can also open a whole page.
+        </p>
+      </section>
+    </main>
+
+    <script src="reader.js"></script>
+  </body>
+</html>
